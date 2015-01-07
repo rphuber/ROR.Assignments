@@ -1,2 +1,2 @@
 # Fancy code goes here!
-# This is the best game ever!
+# This is the second best game ever!
