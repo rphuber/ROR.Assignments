@@ -15,17 +15,17 @@ target = rand(100) + 1
 
 # Keep track of the number of guesses the player has made
 num_guesses = 0
-remaining_guesses = 10 - num_guesses
+remaining_guesses = 5 - num_guesses
 
 # Track wether or not the player has guessed correctly
 guessed_correctly = false
 
 
 # Keep allowing the player to guess until they either guess the correct number or run out of guesses
-until num_guesses == 10 || guessed_correctly
+until num_guesses == 5 || guessed_correctly
 
 	# Before each guess, let the player know how many guesses (out of 10) they have left
-	puts "You have #{10 - num_guesses} guesses left."
+	puts "You have #{5 - num_guesses} guesses left."
 
 	# Prompt the player to make a guess as to what the target number is
 	print "Make a guess: "
