@@ -1,18 +1,7 @@
+require './04.Horse.rb'
+
 # Display horses to the screen
-class Horse
-	attr_accessor :name
-	attr_accessor :location
 
-	def initialize
-		self.name = "Default"
-		self.location = 0
-	end
-
-	def move
-		self.location += rand(1..6)
-		
-	end
-end	
 
 horse1 = Horse.new
 horse1.name = "Peanut"
@@ -40,15 +29,20 @@ class Board
 
 	def display_horses
 		horses.each do |horse|
-			puts horse.name
+			horse.display_lane
+			puts '-'*80
 		end
 	end
 
 	def display_board
 		puts '-'*80
 		self.display_horses
-		puts '-'*80
-		
+	end
+
+	def move_horses
+		horses.each do |horse|
+			horse.move
+		end
 	end
 end
 
@@ -57,6 +51,21 @@ the_iron_derby = Board.new
 the_iron_derby.horses.push(horse1, horse2, horse3, horse4)
 
 the_iron_derby.display_board
+
+while true
+	the_iron_derby.display_board
+	gets.chomp
+	the_iron_derby.move_horses
+	the_iron_derby.display_board
+
+	the_iron_derby.horses do |horse|
+		if horse.location == 80
+			false
+		end
+	end
+		
+
+end
 # Input each horse you want to bid for
 # puts "Pick a horse by typing a name?"
 # name = gets.chomp
