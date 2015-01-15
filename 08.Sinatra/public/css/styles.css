@@ -1,0 +1,13 @@
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+.contact-card {
+  background-color: rgba(199, 217, 255, 0.7);
+  float: left;
+  width: 30%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px; }
+  .contact-card:hover {
+    background-color: rgba(199, 217, 255, 0.5); }

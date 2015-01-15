@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'faker'
 
 # get '/' do
 #   "Ryan Huber"
@@ -17,16 +18,15 @@ get '/hello_world' do
 end
 
 get '/name' do
-	@students = [
-		{
-			first_name: "William",
-			last_name: "Griffin"
-		}, 
-		{
-			first_name: "Ryan",
-			last_name: "Huber"
-		}
-	]
+
+	@students = []
+
+	12.times do 
+		person = {}
+		person["name"] = Faker::Name.name
+		person["email"] = Faker::Internet.email
+		@students.push(person)
+	end
 
 	erb :name, layout: :lazy
 end

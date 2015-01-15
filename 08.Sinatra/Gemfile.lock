@@ -1,6 +1,9 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    faker (1.4.3)
+      i18n (~> 0.5)
+    i18n (0.7.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -14,4 +17,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faker
   sinatra

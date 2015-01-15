@@ -1,0 +1,28 @@
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.contact-card {
+	background-color: rgba(#C7D9FF, .7);
+	float: left;
+	width: 30%;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 10px;
+
+	&:hover {
+		background-color: rgba(#C7D9FF, .5);
+		
+	}
+}
+
+
+
+.contact-name {
+
+}
+
+.contact-email {
+
+}
