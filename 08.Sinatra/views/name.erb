@@ -1,8 +1,10 @@
+
 <% @students.each do |student|%>
 
 <div class="contact-card">
 	<p class="contact-name">Name: <%= student["name"] %></p>
 	<p class="contact-email">Email: <%= student["email"] %></p>
+	<p class="contact-id">id: <%= student["id"] %></p>
 </div>
 
 <% end %>
