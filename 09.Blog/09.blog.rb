@@ -60,9 +60,10 @@ end
 # Update
 patch '/update_post/:id' do
 	@post = Post.get params[:id]
-	@post.update title:params[:title]
-	@post.update author:params[:author]
-	@post.update content:params[:content]
+	@post.update title:params[:title], author:params[:author], content:params[:content]
+	# No longer need - can do all inline - see above ^
+	# @post.update author:params[:author]
+	# @post.update content:params[:content]
 	redirect to '/'
 end
 
