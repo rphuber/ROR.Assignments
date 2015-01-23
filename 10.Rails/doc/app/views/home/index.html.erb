@@ -1,0 +1,14 @@
+<!-- <button><a href="">Create Contact</a></button> -->
+
+<%= link_to "Create Contact", new_contact_path %>
+<ul>
+<% @contacts.each do |contact| %>
+	<li>
+		<%= contact.first_name %>
+		<%= contact.middle_name %>
+		<%= contact.last_name %>
+		<%= link_to "Show", contact_path(contact) %>
+	</li>
+<% end %>
+
+</ul>
