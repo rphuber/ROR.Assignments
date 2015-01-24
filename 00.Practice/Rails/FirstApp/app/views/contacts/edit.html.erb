@@ -1,0 +1,28 @@
+<h2>Edit Contact</h2>
+
+<%= form_for @contact do |f| -%>
+  <%= f.label :first_name, "First Name" %>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name, "Last Name" %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :phone_number, "Phone Number" %>
+  <%= f.text_field :phone_number %>
+  <br>
+  <%= f.label :address, "Address" %>
+  <%= f.text_field :address %>
+  <br>
+  <%= f.label :city, "City" %>
+  <%= f.text_field :city %>
+  <br>
+  <%= f.label :state, "State" %>
+  <%= f.text_field :state %>
+  <br>
+  <%= f.label :zip_code, "Zip Code" %>
+  <%= f.text_field :zip_code %>
+  <br>
+  <%= f.submit %>
+  
+
+<% end -%>
