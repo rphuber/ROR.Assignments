@@ -1,0 +1,9 @@
+<h3>Home</h3>
+<%= link_to "Create Patient", new_patient_path %>
+<br>
+
+<% @patients.each do |patient| %>
+  <%= patient.first_name %>
+  <%= patient.last_name %>
+  <br>
+<% end %>  
